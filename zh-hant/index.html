@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="a.css"/>
+  <link rel="stylesheet" href="/a.css"/>
   <title>使用說明</title>
+  <script type="text/javascript" src="/version.js"></script>
 </head>
 <body>
   <table border=1 width="100%">
@@ -19,12 +20,21 @@
       </td>
       <td><p><a href="https://youtu.be/UvKXTGVELOw" target="_blank">YouTube</a></p></td>
     </tr>
+    <tr>
+      <td>
+        教學視頻
+      </td>
+      <td>
+      添加圖片記錄
+      </td>
+      <td><p><a href="https://youtu.be/UynqM_XJIX0" target="_blank">YouTube</a></p></td>
+    </tr>
   </table>
   <table width="100%">
     <tr>
-      <td width="60%"><h1>使用說明 (v1.09)</h1></td>
-      <td width="20%"><a href = "keep-accounts-zh-hans.html">简体中文</a></td>
-      <td width="20%"><a href = "keep-accounts.html">English</a></td>
+      <td width="60%"><h1>使用說明 (v<span id="KeepAccounts"></span>)</h1></td>
+      <td width="20%"><a href = "/zh-hans/index.html">简体中文</a></td>
+      <td width="20%"><a href = "/en/index.html">English</a></td>
     </tr>
   </table>
 <!-- TRANSLATE START -->
@@ -44,22 +54,23 @@
   在彈出的窗口中填入相應信息後點擊右上角的<span class="button">"添加"</span>。有如下信息可以輸入：</p>
   <table border=1 width=100%>
     <tr><td width=100>字段</td><td>注意</td></tr>
-    <tr><td>金額</td><td style="text-align: start">
-      點擊金額右側的按鈕可以選擇其他貨幣，系統會自動換算成當前貨幣對應金額。<br/>可以輸入+，-，*進行簡單運算。
+    <tr><td>金額</td><td style="text-align: start"><br/>可以輸入+，-，*進行簡單運算。
     </td></tr>
     <tr><td>商家</td><td style="text-align: start">
-      點擊商家右側的<img class="symbol" src="sf/list.bullet.png" />按鈕可以顯示之前在相同子分類下記錄過的商家列表。
+      點擊商家右側的<img class="symbol" src="/sf/list.bullet.png" />按鈕可以顯示之前在相同子分類下記錄過的商家列表。
     </td></tr>
 
     <tr><td>標籤</td><td style="text-align: start">
       用在"設置">"高級"頁中定義的標籤標記記錄，之後可以在「圖表」頁查看不同標籤下的數據匯總。
     </td></tr>
-
+    <tr><td>支付方式</td><td style="text-align: start">
+      選擇在"設置">"高級"頁中定義的支付方式，之後可以在「圖表」頁查看不同支付方式下的數據匯總。記錄將使用此支付方式的貨幣。
+    </td></tr>
     <tr><td>日期</td><td style="text-align: start">
       點擊右側箭頭，在展開的內容中填入信息。
     </td></tr>
     <tr><td>詳情</td><td style="text-align: start">
-      點擊右側的<img class="symbol" src="sf/square.and.pencil.png" />按鈕後填入信息。
+      點擊右側的<img class="symbol" src="/sf/square.and.pencil.png" />按鈕後填入信息。
     </td></tr>
     <tr><td>連續添加</td><td style="text-align: start">
       選中後點擊<span class="button">"添加"</span>不會關閉窗口，以便添加下一筆記錄。添加分類、標籤、自動記錄模版時也可以同樣操作。
@@ -89,8 +100,8 @@
     <li>長按記錄，在彈出菜單中可以選擇
       <span class="button">"編輯"</span>或<span class="button">"刪除"</span>記錄。
     </li>
-    <li>可以移動記錄到其他子分類。方法是點擊右上角<img class="symbol" src="sf/list.bullet.png" />，並選擇「開始選擇」。
-      選好要移動的記錄後，進入目標子分類，再點擊右上角<img class="symbol" src="sf/list.bullet.png" />，選擇「移動至此」。
+    <li>可以移動記錄到其他子分類。方法是點擊右上角<img class="symbol" src="/sf/list.bullet.png" />，並選擇「開始選擇」。
+      選好要移動的記錄後，進入目標子分類，再點擊右上角<img class="symbol" src="/sf/list.bullet.png" />，選擇「移動至此」。
       完成後點擊剛才彈出菜單中的「完成選擇」，結束選擇狀態。</li>
       <li>進入"分類"標籤頁,點擊"數據回收"。這裡列出了已經刪除但還沒有用iCloud同步的記錄，
         可以點擊右上角<span class="button">"編輯"</span>，選擇並移動記錄到其他子分類，就可以還原被刪除記錄。</li>
@@ -98,10 +109,10 @@
   </ul>
   <h2>4. 圖表</h2>
   進入"圖表"標籤頁可以按記錄的不同字段使用圖表進行匯總統計。如按年匯總統計，每一年再按月進行匯總統計等等。
-  點擊「匯總方式和順序」右側的<span class="button">"重置"</span>會恢復到如下缺省匯總字段和順序：
+  點擊匯總方式和順序下的<span class="button">"編輯"</span>，可以選擇匯總方式，拖動右側的<img class="symbol" src="/sf/list.bullet.png" />以調整順序。包含如下匯總方式：
   <ul>
-    <li>按收支匯總（此字段必須出現且不能改變順序）</li>
     <li>按標籤匯總</li>
+    <li>按支付方式匯總</li>
     <li>按年匯總</li>
     <li>按月匯總</li>
     <li>按日匯總</li>
@@ -109,7 +120,12 @@
     <li>按子分類匯總</li>
     <li>按商家匯總</li>
   </ul>
-  點擊「匯總方式和順序」右側的<span class="button">"編輯"</span>，可以刪減字段，並調整順序。
+  進入某一匯總頁面後，點擊右上角的<img class="symbol" src="/sf/house.fill.png" />可以返回起始頁。
+  點擊右上角的<img class="symbol" src="/sf/star.png" />可以將當前頁面加入快速訪問。之後回到起始頁可以看到已添加的快速訪問頁面，點擊後可以直接訪問相關頁面，再次點擊<img class="symbol" src="/sf/star.png" />後刪除。
+  如果當前訪問頁面的路徑上包含年月日或年月或僅包含年字段，且與當前時間相同，添加到快速訪問時會提示「是否始終保持訪問路徑上的日期爲最新？」，如果選擇是，添加的快速訪問路徑上的日期將始終保持爲當前日期。
+  例如，當前日期爲2021年7月某天，對2021年7月的購物支出的匯總，添加到快速訪問後，會顯示爲本月購物支出，進入8月後點擊快速訪問鏈接會自動進入8月的購物支出的匯總。
+
+
   <h2>5. 設置</h2>
   <p>點擊應用下方的<span class="button">「設置」</span>，可以看到以下按鈕和功能</p>
   <table border=1>
@@ -165,6 +181,10 @@
   <td>標籤管理</td>
   <td style="text-align: start">添加自定義標籤。添加後，在添加記錄時就可以選擇這個標籤來標記記錄。</td>
 </tr>
+<tr>
+  <td>支付方式管理</td>
+  <td style="text-align: start">添加支付方式。如果需要使用非缺省貨幣進行記錄，需要首先定義此貨幣的支付方式，並在添加記錄時選擇這個支付方式進行記錄。</td>
+</tr>
   </table>
   <h2>6. 導入/導出文件格式</h2>
 
@@ -202,13 +222,13 @@
     <li>標籤名稱</li>
     <li>標籤顏色：顏色的RGB數值，範圍在0-1之間，用|分割， 如"0.5|0|0.5"</li>
   </ol>
-  <h2>7. 演示視頻</h2>
-<p>
-        <video width="310" height="672" controls>
-          <source src="demo/extract_info_cn.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-</p>
+  支付方式包含以下字段：
+  <ol>
+    <li>4</li>
+    <li>支付方式ID，任意可唯一標識的字符串</li>
+    <li>支付方式名稱</li>
+    <li>貨幣：如"CNY"</li>
+  </ol>
   <!-- TRANSLATE END -->
 </body>
 

@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="a.css" />
+  <link rel="stylesheet" href="/a.css" />
   <title>使用说明</title>
+  <script type="text/javascript" src="/version.js"></script>
 </head>
 
 <body>
@@ -21,14 +22,24 @@
       <td><p><a href="https://www.bilibili.com/video/BV1aN4y1g7Kk" target="_blank">B站</a></p>
       <p><a href="https://youtu.be/UvKXTGVELOw" target="_blank">YouTube</a></p></td>
     </tr>
+    <tr>
+      <td>
+        教学视频
+      </td>
+      <td>
+      添加图片记录
+      </td>
+      <td><p><a href="https://www.bilibili.com/video/BV1kT411g7Ct" target="_blank">B站</a></p>
+      <p><a href="https://youtu.be/UynqM_XJIX0" target="_blank">YouTube</a></p></td>
+    </tr>
   </table>
   <table width="100%">
     <tr>
       <td width="60%">
-        <h1>使用说明 (v1.09)</h1>
+        <h1>使用说明 (v<span id="KeepAccounts"></span>)</h1>
       </td>
-      <td width="20%"><a href="keep-accounts-zh-hant.html">繁體中文</a></td>
-      <td width="20%"><a href="keep-accounts.html">English</a></td>
+      <td width="20%"><a href="/zh-hant/index.html">繁體中文</a></td>
+      <td width="20%"><a href="/en/index.html">English</a></td>
     </tr>
   </table>
   <!-- TRANSLATE START -->
@@ -48,22 +59,23 @@
   在弹出的窗口中填入相应信息后点击右上角的<span class="button">"添加"</span>。有如下信息可以输入：</p>
   <table border=1 width=100%>
     <tr><td width=100>字段</td><td>注意</td></tr>
-    <tr><td>金额</td><td style="text-align: start">
-      点击金额右侧的按钮可以选择其他货币，系统会自动换算成当前货币对应金额。<br/>可以输入+，-，*进行简单运算。
+    <tr><td>金额</td><td style="text-align: start"><br/>可以输入+，-，*进行简单运算。
     </td></tr>
     <tr><td>商家</td><td style="text-align: start">
-      点击商家右侧的<img class="symbol" src="sf/list.bullet.png" />按钮可以显示之前在相同子分类下记录过的商家列表。
+      点击商家右侧的<img class="symbol" src="/sf/list.bullet.png" />按钮可以显示之前在相同子分类下记录过的商家列表。
     </td></tr>
 
     <tr><td>标签</td><td style="text-align: start">
       用在"设置">"高级"页中定义的标签标记记录，之后可以在“图表”页查看不同标签下的数据汇总。
     </td></tr>
-
+    <tr><td>支付方式</td><td style="text-align: start">
+      选择在"设置">"高级"页中定义的支付方式，之后可以在“图表”页查看不同支付方式下的数据汇总。记录将使用此支付方式的货币。
+    </td></tr>
     <tr><td>日期</td><td style="text-align: start">
       点击右侧箭头，在展开的内容中填入信息。
     </td></tr>
     <tr><td>详情</td><td style="text-align: start">
-      点击右侧的<img class="symbol" src="sf/square.and.pencil.png" />按钮后填入信息。
+      点击右侧的<img class="symbol" src="/sf/square.and.pencil.png" />按钮后填入信息。
     </td></tr>
     <tr><td>连续添加</td><td style="text-align: start">
       选中后点击<span class="button">"添加"</span>不会关闭窗口，以便添加下一笔记录。添加分类、标签、自动记录模版时也可以同样操作。
@@ -93,8 +105,8 @@
     <li>长按记录，在弹出菜单中可以选择
       <span class="button">"编辑"</span>或<span class="button">"删除"</span>记录。
     </li>
-    <li>可以移动记录到其他子分类。方法是点击右上角<img class="symbol" src="sf/list.bullet.png" />，并选择“开始选择”。
-      选好要移动的记录后，进入目标子分类，再点击右上角<img class="symbol" src="sf/list.bullet.png" />，选择“移动至此”。
+    <li>可以移动记录到其他子分类。方法是点击右上角<img class="symbol" src="/sf/list.bullet.png" />，并选择“开始选择”。
+      选好要移动的记录后，进入目标子分类，再点击右上角<img class="symbol" src="/sf/list.bullet.png" />，选择“移动至此”。
       完成后点击刚才弹出菜单中的“完成选择”，结束选择状态。</li>
       <li>进入"分类"标签页,点击"数据回收"。这里列出了已经删除但还没有用iCloud同步的记录，
         可以点击右上角<span class="button">"编辑"</span>，选择并移动记录到其他子分类，就可以还原被删除记录。</li>
@@ -102,10 +114,10 @@
   </ul>
   <h2>4. 图表</h2>
   进入"图表"标签页可以按记录的不同字段使用图表进行汇总统计。如按年汇总统计，每一年再按月进行汇总统计等等。
-  点击“汇总方式和顺序”右侧的<span class="button">"重置"</span>会恢复到如下缺省汇总字段和顺序：
+  点击汇总方式和顺序下的<span class="button">"编辑"</span>，可以选择汇总方式，拖动右侧的<img class="symbol" src="/sf/list.bullet.png" />以调整顺序。包含如下汇总方式：
   <ul>
-    <li>按收支汇总（此字段必须出现且不能改变顺序）</li>
     <li>按标签汇总</li>
+    <li>按支付方式汇总</li>
     <li>按年汇总</li>
     <li>按月汇总</li>
     <li>按日汇总</li>
@@ -113,7 +125,13 @@
     <li>按子分类汇总</li>
     <li>按商家汇总</li>
   </ul>
-  点击“汇总方式和顺序”右侧的<span class="button">"编辑"</span>，可以删减字段，并调整顺序。
+  进入某一汇总页面后，点击右上角的<img class="symbol" src="/sf/house.fill.png" />可以返回起始页。
+  点击右上角的<img class="symbol" src="/sf/star.png" />可以将当前页面加入快速访问。之后回到起始页可以看到已添加的快速访问页面，点击后可以直接访问相关页面，
+  再次点击<img class="symbol" src="/sf/star.fill.png" />后快速访问将被删除。
+  如果当前访问页面的路径上包含年月日或年月或仅包含年字段，且与当前时间相同，添加到快速访问时会提示“是否始终保持访问路径上的日期为最新？”，如果选择是，添加的快速访问路径上的日期将始终保持为当前日期。
+  例如，当前日期为2021年7月某天，对2021年7月的购物支出的汇总，添加到快速访问后，会显示为本月购物支出，进入8月后点击快速访问链接会自动进入8月的购物支出的汇总。
+
+
   <h2>5. 设置</h2>
   <p>点击应用下方的<span class="button">“设置”</span>，可以看到以下按钮和功能</p>
   <table border=1>
@@ -169,6 +187,10 @@
   <td>标签管理</td>
   <td style="text-align: start">添加自定义标签。添加后，在添加记录时就可以选择这个标签来标记记录。</td>
 </tr>
+<tr>
+  <td>支付方式管理</td>
+  <td style="text-align: start">添加支付方式。如果需要使用非缺省货币进行记录，需要首先定义此货币的支付方式，并在添加记录时选择这个支付方式进行记录。</td>
+</tr>
   </table>
   <h2>6. 导入/导出文件格式</h2>
 
@@ -205,6 +227,13 @@
     <li>标签ID，任意可唯一标识标签的字符串</li>
     <li>标签名称</li>
     <li>标签颜色：颜色的RGB数值，范围在0-1之间，用|分割， 如"0.5|0|0.5"</li>
+  </ol>
+  支付方式包含以下字段：
+  <ol>
+    <li>4</li>
+    <li>支付方式ID，任意可唯一标识的字符串</li>
+    <li>支付方式名称</li>
+    <li>货币：如"CNY"</li>
   </ol>
   <!-- TRANSLATE END -->
 </body>

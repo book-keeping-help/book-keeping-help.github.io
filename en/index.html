@@ -5,19 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="a.css" />
+  <link rel="stylesheet" href="/a.css" />
   <title>User Manual</title>
+  <script type="text/javascript" src="/version.js"></script>
 </head>
 
 
 <body>
+<table border=1 width="100%">
+    <tr>
+      <td>
+        Demo
+      </td>
+      <td>
+      <p><a href="https://youtu.be/QQ_v79eh8wE" target="_blank">YouTube</a></p></td>
+    </tr>
+    </table>
   <table width="100%">
     <tr>
       <td width="60%">
-        <h1>User Manual (v1.09)</h1>
+        <h1>User Manual (v<span id="KeepAccounts"></span>)</h1>
       </td>
-      <td width="20%"><a href="keep-accounts-zh-hans.html">简体中文</a></td>
-      <td width="20%"><a href="keep-accounts-zh-hant.html">繁體中文</a></td>
+      <td width="20%"><a href="/zh-hans/index.html">简体中文</a></td>
+      <td width="20%"><a href="/zh-hant/index.html">繁體中文</a></td>
     </tr>
   </table>
   <h2>1. Category and Subcategory</h2>
@@ -38,21 +48,24 @@
   <table border=1 width=100%>
     <tr><td width=100>Fields</td><td>Notes</td></tr>
     <tr><td>Amount</td><td style="text-align: start">
-      you can choose different currency by clicking the button next to amount input field.
-      <br/>You can input +,-,* to do simple calulation in amount input field.
+    You can input +,-,* to do simple calulation in amount input field.
     </td></tr>
     <tr><td>Merchant</td><td style="text-align: start">
-      You can select from merchants previously recorded in same subcategory by clicking <img class="symbol" src="sf/list.bullet.png" />  button next to merchant input field.
+      You can select from merchants previously recorded in same subcategory by clicking <img class="symbol" src="/sf/list.bullet.png" />  button next to merchant input field.
     </td></tr>
     <tr><td>Label</td><td style="text-align: start">
       Mark record with a label defined in "Settings"/"Advanced" page.
       The summary of different labels can be viewed at "Chart" tab.
     </td></tr>
+    <tr><td>Payment</td><td style="text-align: start">
+      Select a payment method defined in "Settings"/"Advanced" page. The record will use the payment's currency.
+      The summary of different payments can be viewed at "Chart" tab.
+    </td></tr>
     <tr><td>Date</td><td style="text-align: start">
       Click right arrow button, fill information in expanded view.
     </td></tr>
     <tr><td>Detail</td><td style="text-align: start">
-      Click <img class="symbol" src="sf/square.and.pencil.png" /> on the right and fill the information。
+      Click <img class="symbol" src="/sf/square.and.pencil.png" /> on the right and fill the information。
     </td></tr>
     <tr><td>Continuous add</td><td style="text-align: start">
       The dialog will not be closed after clicking <span class="button">"Add"</span>，so that you can add next record.
@@ -92,24 +105,26 @@
     <li>You can click the record to view more information, you can click the image if any to enlarge it.</li>
     <li>You can edit/delete record by long pressing the record.</li>
     <li>You can move the records to different subcategory. First click
-      <img class="symbol" src="sf/list.bullet.png" /> in the upper-right corner and select "Start Selection" in the popup menu.
+      <img class="symbol" src="/sf/list.bullet.png" /> in the upper-right corner and select "Start Selection" in the popup menu.
       Then select records which need to be moved.
       Enter the target subcategory page, click
-      <img class="symbol" src="sf/list.bullet.png" /> in the upper-right corner and select "Move to here".
+      <img class="symbol" src="/sf/list.bullet.png" /> in the upper-right corner and select "Move to here".
       Click "Done selection" in the same popup menu to finish selection state.
     </li>
     <li>In "Category" tab, click "Data Recycle". Here, you can view records deleted but not synchronized with iCloud.
       Click "Edit" button in the top-right corner, select and move deleted records
     to other subcategory to restore them. </li>
-    <li>In "Category" tab, click "Search records". Here, you can use keyword to search in all records's detail and merchant information. </li>    
+    <li>In "Category" tab, click "Search records". Here, you can use keyword to search in all records's detail and merchant information. </li>
   </ul>
   <h2>4. Chart</h2>
-  In "Chart" tab, you can view statistic on the records by different angle. For example, show total sum of the records for each year, then in each year, show total sum of the records for each month.
-  By click <span class="button">"Reset"</span> in the upper right corner of "Summary fields and order" section, the following fields and order will be set for histogram:
+  In "Chart" tab, you can view statistic on the records by different angle. For example, show total sum of the records for each year,
+  then in each year, show total sum of the records for each month.
 
+  You can change the summary fields by click <span class="button">Edit</span> in "summary method and order" section. Dragging <img class="symbol" src="/sf/list.bullet.png" /> in
+  the right of the summary method to change the order. Following summary methods are supported:
   <ul>
-    <li>Balance Summary(This field can not be deleted and moved)</li>
     <li>Summary By Label</li>
+    <li>Summary By Payment</li>
     <li>Yearly Summary</li>
     <li>Monthly Summary</li>
     <li>Daily Summary</li>
@@ -117,7 +132,14 @@
     <li>Summary By Subcategory</li>
     <li>Summary By Merchant</li>
   </ul>
-  By click <span class="button">"Edit"</span> in the upper right corner of "Summary fields and order" section, you can delete or reorder these fields.
+  After entering a summary page, click <img class="symbol" src="/sf/house.fill.png" /> in the upper right corner to return back to home summary page.
+  Click <img class="symbol" src="/sf/star.png" /> to add this page to quick access pages. Added quick access links will be listed under home summary page.
+  When clicking the quick access link, related page will be accessed, click <img class="symbol" src="/sf/star.fill.png" /> will remove the quick access link.
+  If the access path of current summarize page contains year\month\day or year\month or year only  and these fields's value are same with current date. This app will
+  prompt "Do you want to keep the date on access path always uptodate?" when adding this page to quick access.
+  If selecting 'Yes', the date of the quick access link will always be current date.
+  For example, if current date is 2021/7/1, when adding summarize page of Food category in 2021/7 to quick access.
+  When entering Augest of 2021, the link will point to 2021/8's summarize page.
 
   <h2>5. Settings</h2>
   <p>Enter the <span class="button">“Settings”</span> tab, here you can use following functions and settings.</p>
@@ -179,6 +201,10 @@
     <td>Label Management</td>
     <td>Add self defined label, you can mark each record with one of labels you defined. The summary of different labels can be viewed at "Chart" tab.</td>
   </tr>
+  <tr>
+    <td>Payment Management</td>
+    <td>Add payment, you need to define a payment if you want to add record with non-default currency. The summary of different payments can be viewed at "Chart" tab.</td>
+  </tr>
   </table>
   <h2>6. Import/Export cvs file format</h2>
 
@@ -209,12 +235,19 @@
     <li>Detail</li>
     <li>Label id</li>
   </ol>
-  labels contains following fields:
+  Label contains following fields:
   <ol>
     <li>3</li>
     <li>Label id，any string that can uniquely identify the label.</li>
     <li>Label name</li>
     <li>Label color：RGB color value ranged from 0 to 1, seperated by |， ex. "0.5|0|0.5"</li>
+  </ol>
+  Payment contains following fields:
+  <ol>
+    <li>4</li>
+    <li>Payment id，any string that can uniquely identify the payment.</li>
+    <li>Payment name</li>
+    <li>Payment currency：ex. "USD"</li>
   </ol>
 </body>
 
