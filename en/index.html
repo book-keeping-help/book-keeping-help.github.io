@@ -147,7 +147,7 @@
       <td width='150'>
         Upgrade App<br />(unrestricted use)
       </td>
-      <td style="text-align: start">Before paying for upgrading the app, you can only add 50 records and <span class="button">"Import from file"</span> function can not be used.
+      <td style="text-align: start">
         Click<span class="button">"Upgrade App at price XXX"</span> to pay and upgrade the app.
         After upgrade, text <font color="#28e628">“Purchased”</font> will replace the upgrade button.
         <p>Notice:<br />
@@ -210,15 +210,16 @@
   <tr>
     <td>Question and Feedback</td>
     <td>If you have any question or suggestion about the app, you can click <span class="button">"Questions"</span> 
-      or <span class="button">"Mail feedback"</span>. Please enable notification privilege for this app to receive reply notification.
-      <p>macOS：System Preferences>Notifications>Expense Tracker>Allow notification</p>
-      <p>iOS：Settings>Notification>Expense Tracker>Allow notification</p>
+      or <span class="button">"Mail feedback"</span>. If notification privilege for this app is not enabled, app will display a dialog when enter the feedback page.
+      Click 'Yes' to enable to the privilege to receive reply notification.
     </td>
   </tr>  
   </table>
   <h2>6. Import/Export cvs file format</h2>
 
-  <p>Each line in imported/exported cvs file contains data of one category, subcategory, label or record, seperated by comma.</p>
+  <p>Each line in imported/exported cvs file contains data of one category, subcategory, label or record, seperated by comma.
+    If there is a comma or change line in the field, use \, (full-width comma) and \n.
+  </p>
   Category contains following fields:
   <ol>
     <li>0</li>
