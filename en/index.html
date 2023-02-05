@@ -43,8 +43,8 @@
     <li>To edit/delete a category/subcategory, long press the name of the category, select 'Edit' or 'Delete' in the popup menu.
     </li>
   </ul>
-  <h2>2. Book keeping</h2>
-  <p>Enter 'Category' tab, click one subcategory or enter 'Records' tab, then click <span class="button">"Add record"</span> button,
+  <h2>2. Expense/incoming tracking</h2>
+  <p>Enter 'Category' tab, click one subcategory or enter 'Records' tab, then click <span class="button">"+Expense"</span> or <span class="button">"+Incoming"</span> button,
   fill information of the new record, click <span class="button">"Add"</span> in the upper right corner.
   </p>
   <table border=1 width=100%>
@@ -56,11 +56,11 @@
       You can select from merchants previously recorded in same subcategory by clicking <img class="symbol" src="/sf/ellipsis.circle.png" />  button next to merchant input field.
     </td></tr>
     <tr><td>Label</td><td style="text-align: start">
-      Mark record with a label defined in "Settings"/"Advanced" page.
+      Mark record with a label defined in "Settings"/"Label Management" page.
       The summary of different labels can be viewed at "Chart" tab.
     </td></tr>
     <tr><td>Payment</td><td style="text-align: start">
-      Select a payment method defined in "Settings"/"Advanced" page. The record will use the payment's currency.
+      Select a payment method defined in "Settings/Payment Management" page. The record will use the payment's currency.
       The summary of different payments can be viewed at "Chart" tab.
     </td></tr>
     <tr><td>Date</td><td style="text-align: start">
@@ -69,22 +69,28 @@
     <tr><td>Detail</td><td style="text-align: start">
       Click "Detail" tab and fill the information。
     </td></tr>
+    <tr><td>Image</td><td style="text-align: start">
+      Click "Image" tab, you can attach a image from the Photos or Camera(For example, add an image of receipt or invoice).
+      You can also add an image by dragging it from other app to the Image tab or <span class="button">"+ Expense/Incoming"</span> button.
+      Following action can be done by clicking the buttons in the bottom of the tab.
+      <p>You can use your finger to drag a green rectangle to select a region of the image</p>
+        
+      <ul>
+        <li>Photos: add image from Photos app</li>
+        <li>Camera: add image by taking a picture using camera</li>
+        <li>Crop:  crop the selected region out of image</li>
+        <li>Analyse: list of money amount, date, merchants will be prompt in a new window if there is any contained in selected image region(or the whole image if no selection).
+          Three categories will also be prompt for selection.</li>
+        <li>Clear: Remove the image</li>
+      </ul>
+    </td></tr>    
     <tr><td>Continuous add</td><td style="text-align: start">
       The dialog will not be closed after clicking <span class="button">"Add"</span>,so that you can add next record.
-      This is also supported in label, category and auto-insert template adding dailog。
+      This is also supported in label, category and periodic record template adding dailog。
     </td></tr>
   </table>
-  <p>
-      By clicking "Image" tab in add record dialog window, you can add record with picture from the Photos or Camera(For example, add an image of receipt or invoice).
-      You can also add an image by dragging it from other app to <span class="button">"Add record"</span> button or the image area in add record dialog window.
-  </p>
-    <p>
-      You can use your finger to drag a green rectangle on the image to select a region of image and click <span class="button">"Crop"</span> to crop the region out of image.
 
-    </p>
   <p>
-      Click "Analyse", list of money amount, date, merchants will be prompt in a new window if there is any contained in selected image region(or the whole image if no selection).
-      Three categories will also be prompt for selection.
       <p>Notice：</p>
       <ul>
         <li>The merchants information can only be recongnized when there is at least one previous record contains the information.</li>
@@ -102,8 +108,8 @@
   <ul>
     <li>The popup menu for switching date will only contain date which has records.</li>
     <li>You can select "All" to show records of the whole year or month.</li>
-    <li>You can click the record to view more information, you can click the image if any to enlarge it.</li>
-    <li>You can edit/delete record by long pressing the record.</li>
+    <li>You can click the record to view more information, you can view the attached image in image tab.</li>
+    <li>You can edit/delete record by long pressing(mouse right click in MacOS) the record.</li>
     <li>You can click <span class="button">"Edit"</span> button in the upper-right corner then select some records and click <span class="button">"Move"</span>
       to move records to other subcategory, or click  <span class="button">"Label"</span> to label them (reference Label Management in section 5) 
       or click  <span class="button">"Delete"</span> to delete them.
@@ -211,8 +217,7 @@
   </tr>
   <tr>
     <td>Question and Feedback</td>
-    <td>If you have any question or suggestion about the app, you can click <span class="button">"Questions"</span> 
-      or <span class="button">"Mail feedback"</span>. If notification privilege for this app is not enabled, app will display a dialog when enter the feedback page.
+    <td>If you have any question or suggestion about the app, you can click <span class="button">"Questions"</span>. If notification privilege for this app is not enabled, app will display a dialog when enter the feedback page.
       Click 'Yes' to enable to the privilege to receive reply notification.
     </td>
   </tr>  
